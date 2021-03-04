@@ -6,9 +6,10 @@ import "./container.css";
 function Container() {
 
   const [books, setBooks] = useState([]);
+
   useEffect(() => {
     allBooks();
-  }, []);
+  }, [books]);
 
   const allBooks = () => {
     API.getBooks()
